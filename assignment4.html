@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment 4</title>
+</head>
+<body>
+  
+  <script>
+    /* 
+    SECTION A: JAVASCRIPT ARRAY METHODS
+
+    1. What is the purpose of the `push()` and `pop()` methods in JavaScript arrays? Provide an example for each.
+
+    Answer:
+    The purpose of the Push() method in Javascript array is to add one or more new elements to the end of an array. 
+    
+    Example: 
+    */
+
+    let fruits = ["Apple", "Orange", "Grape", "Watermelon"];
+    let newFruit = "Banana"; // A new element.
+    fruits.push(newFruit); // It adds the new element to the end of the array.
+    console.log(fruits); // Output is ['Apple', 'Orange', 'Grape', 'Watermelon', 'Banana']--The new element ("Banana") has been added to the end of the array.
+
+    /* The purpose of the pop() method in Javascript array is that it is used to remove the last element of an array and returns the removed element.
+
+    Example: */
+
+    let digits = [2, 4, 6, 8, 10];
+    const lastArrayElement = digits.pop(); // The last element (10) in the array has been removed.
+    console.log(lastArrayElement); // The result is 10.
+    console.log(digits); // The result is now [2, 4, 6, 8].
+
+
+    /*
+    2. Use the `filter()` method to extract all even numbers from an array of numbers between 1
+    and 20.
+
+    Answer: 
+    */
+
+    let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+
+    let evenNumbers = numbers.filter(numbers => numbers % 2 === 0);
+    console.log(evenNumbers); // The result is  [2, 4, 6, 8, 10, 12, 14, 16, 18, 20].
+
+    /*
+    3. Describe how the `find()` method works and give a practical example.
+
+    Answer
+    The find() method in Javascript is used to get the first element of an array that passes the test of a provided function. It searches through the elements in the array and returns the element that meets the condition of the provided function.
+
+    Example:
+    */
+
+    let count = [3, 1, 3, 4, 2, 5, 7, 9];
+    let evenNumber = count.find((x) => x % 2 === 0); // This returns the first even number in the array.
+    console.log(evenNumber);// The result is 4. Although 4 is not the only even number in the array but it is the first and that is the number the find() method returns.
+
+    /*
+    SECTION B: JAVASCRIPT CONDITIONS
+    1. Explain the difference between `if`, `else if`, and `else` with an example.
+    
+    Answer
+    
+    If, else and else if are conditional statements in javascript that determines and controls what code to be executed. They are used to carry out a Javascript code if certain conditions are met.
+
+    if statement is used to execute a block of code if a particular condition is true. 
+    Example:
+    */
+    let speed = 70;
+    if (speed >= 70) {       // Here, the condition to execute code is given.
+      console.log("You passed"); // The code to be executed is stated here, if the condition is true.
+    }
+    /*
+    The else statement on the other hand executes a block of code if the condition given in the if statement is false.
+    
+    Example:
+    */
+   let age = 17;
+   if (age >= 18) {
+    console.log("You can apply");
+   } else {
+    console.log("You can not apply"); // This else statement will run because the condition in the if statement is false.
+   };
+
+   /*
+   The else if statement, unlike the if statement is used to check for multiple conditions. It is used to check for other conditions after the if condition has been stated and they can be used as many times as possible.
+   
+   Example:
+   */
+
+   let result = 60;
+
+if(result >= 70) {
+  console.log("A");
+} else if (result >= 60) {  // First else if condition
+  console.log("B");
+} else if (result >= 50) {  // Second else if condition
+  console.log("C");
+} else if (result >= 45) { // Third else if condition
+  console.log("D");
+} else {console.log ("Fail")};
+
+/*
+2. Write a JavaScript program that checks if a number is positive, negative, or zero.
+
+Answer:
+*/
+
+let number = 0;
+
+//To check if the number is positive;
+if (number > 0) {
+  console.log("The number is positve");
+} else if (number < 0) {
+  console.log("The number is Negative");
+} else {
+  console.log ("The number is zero");
+};
+
+/*
+3. What is a switch statement? Give an example that checks for different days of the week.
+
+Answer:
+
+ A Switch statement is a type of control flow statement that allows you to check for a particular value and execute specific code blocks based on that value. It accepts a value and compares it against multiple possible cases and executes the code block for the first matching case. It also accepts a code block to execute when none of the cases match
+
+ Example:
+*/
+
+let day = "Sunday";
+switch (day) {
+  case "Sunday":
+    console.log("Start of week"); // Code block to execute when expression === value1
+    break;
+  case "Friday":
+    console.log("Almost Weekend"); // Code block to execute when expression === value2
+    break; 
+    default: 
+    console.log("Just another day"); // Code block to execute when none of the cases match
+};
+
+/*
+4. Explain the use of comparison operators (==, ===, !=, !==, >, <) with examples.
+
+Answer:
+Equal (==): It is used to compare two values for equality, but does not consider data types.
+
+Strict Equal (===): It is used to compares two values for equality and considers their data types.
+
+Not Equal (!=): Determines if two values are not equal, ignoring their data types.
+
+Strict Not Equal (!==): This checks if two values are not equal and also considers their data types. 
+
+Greater Than (>): Checks if the value on the left is greater than the value on the right.
+
+Less Than (<): Checks if the value on the left is less than the value on the right.
+
+
+5. Write a program that determines if a student passed or failed based on a score using an if-else condition.
+
+Answer:
+*/
+let studentScore = 49;
+let cutOffMark = 50;
+
+if (studentScore >= cutOffMark) {
+  console.log("Passed");
+}else {
+  console.log("Failed");
+};
+
+/*
+SECTION C: JAVASCRIPT FUNCTIONS
+1. What is a function in JavaScript? How do you define one?
+Answer:
+
+A Javascript Function is a block of code created to perform a particular task. Javascript Functions are unique because the block of code is reusable which helps in organizing a program. 
+A function is defined with the 'function' keyword. Followed by the user defined function name, a list of parameters enclosed within parentheses and separated by commas. Then followed by a list of statements composing the body of the function enclosed within curly brackets
+
+2. Create a function named `greetUser` that takes a name as a parameter and logs a greeting
+message.
+
+Answer:
+*/
+
+function greetUser(name) {
+ console.log("Welcome!" + " " + name);
+}
+greetUser("Adeola"); // Welcome! Adeola
+
+/*
+3. Write a function that takes two numbers and returns their product.
+
+Answer:
+*/
+function numberProduct(number1, number2) {
+  return number1 * number2;
+}
+console.log(numberProduct(4, 4)); // 16
+
+  </script>
+</body>
+</html>
