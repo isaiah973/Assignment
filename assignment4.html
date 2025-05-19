@@ -147,19 +147,50 @@ switch (day) {
 4. Explain the use of comparison operators (==, ===, !=, !==, >, <) with examples.
 
 Answer:
+
 Equal (==): It is used to compare two values for equality, but does not consider data types.
+Example:
+*/
+let b = 5;
+console.log(b == "5"); // This code returns true because 5 is the same with "5" if the data types are not considered.
 
+/*
 Strict Equal (===): It is used to compares two values for equality and considers their data types.
+Example:
+*/
+let c = 5;
+console.log(b === "5"); // This code returns false because 5 and "5" are not the same when data types are considered.
 
-Not Equal (!=): Determines if two values are not equal, ignoring their data types.
+/*
+Not Equal (!=): Determines if two values are NOT equal, ignoring their data types.
+Example:
+*/
+console.log("hello" != "hello"); // This returns false because "hello" and "hello" are equal.
 
-Strict Not Equal (!==): This checks if two values are not equal and also considers their data types. 
+/*
+Strict Not Equal (!==): This checks if two values are not equal and also considers their data types.
+Example: 
+*/
+console.log("1" !== 1);
 
-Greater Than (>): Checks if the value on the left is greater than the value on the right.
-
+/*
+Greater Than (>): This is an operator that checks if the value on the left is greater than the value on the right.
+Example:
+*/
+let x = 5;
+if(x > 4) {
+  console.log("x is greater than 4"); // This code runs because 5 is greater than 4
+}
+/*
 Less Than (<): Checks if the value on the left is less than the value on the right.
+Example
+*/
+let a = 5;
+if(a < 4) {
+  console.log("a is greater than 4"); // This code will not run because 5 is not less than 4
+}
 
-
+/*
 5. Write a program that determines if a student passed or failed based on a score using an if-else condition.
 
 Answer:
